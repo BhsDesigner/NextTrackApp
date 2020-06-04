@@ -1,0 +1,16 @@
+a{
+    text-decoration: none;
+    color: #444;
+}
+a:hover{
+    color: #F68E4F;
+}
+.mb-10{
+    margin-bottom: 10px;
+}
+.mb-20{
+    margin-bottom: 20px;
+}
+.mb-30{
+    margin-bottom: 30px;
+}
