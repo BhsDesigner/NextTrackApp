@@ -18,6 +18,7 @@ export const useStyles = makeStyles(theme => ({
     },
     DetailsBox:{
         textAlign:'left',
+        padding:theme.spacing(0, 3),
     },
     GridItem:{
         padding:theme.spacing(2, 3),
