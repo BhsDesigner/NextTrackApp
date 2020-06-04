@@ -16,7 +16,7 @@ const FooTer = () => {
                 <Grid container>
 
 
-                    <Grid item xs={12} md={6}>
+                    <Grid item xs={3} >
                         <Typography align={"left"}>
                             <Link href="//twitter.com/HomescapesUK">
                                 <a><TwitterIcon/> </a>
@@ -26,16 +26,16 @@ const FooTer = () => {
                             </Link>
                         </Typography>
                     </Grid>
-                    <Grid item xs={12} md={6}>
-                        <Typography align={"right"}>
+                    <Grid item xs={9} >
+                        <Typography align={"right"} >
                             <Link href="//www.homescapesonline.com/contact">
                                 <a>Contact Us</a>
                             </Link>
-                            <Link href="//www.homescapesonline.com/info/website-privacy-and-cookies">
-                                <a className={classes.Link}>Privacy policy</a>
-                            </Link>
                             <Link href="//www.homescapesonline.com/terms-and-condtions">
-                                <a className={classes.Link}>Terms & Conditions</a>
+                                <a className={classes.Link}>Terms</a>
+                            </Link>
+                            <Link href="//www.homescapesonline.com/info/website-privacy-and-cookies">
+                                <a className={classes.Link}>Privacy</a>
                             </Link>
                         </Typography>
                     </Grid>

@@ -12,7 +12,7 @@ const TrackingError = (props) => {
         <div>
             <Container component="main" maxWidth="md" className={classes.TrackingError}>
                 <Grid container>
-                    <Grid item xs={6} md={12}>
+                    <Grid item>
 
                         <Typography className={classes.Error}>
                            <ErrorIcon className={classes.Icon} /> Tracking info is not available at the moment. Please check back later.
