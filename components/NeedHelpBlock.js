@@ -5,6 +5,7 @@ import PhoneIcon from "@material-ui/icons/Phone";
 import EmailIcon from "@material-ui/icons/Email";
 import React from "react";
 import {useStyles} from "../Tracking/TrackingStyles";
+import Link from "next/link";
 
 export const NeedHelpBLock = () => {
     const classes = useStyles();
@@ -45,10 +46,13 @@ export const NeedHelpBLock = () => {
                 </Typography>
 
                 <Typography className={classes.mb10}>
-                    <PhoneIcon className={classes.Icons} /> Call us at: 0121 3680051
+                    <a href="tel:0121 3680051" className={classes.Link}> <PhoneIcon className={classes.Icons} /> Call us at: 0121 3680051</a>
+
                 </Typography>
                 <Typography className={classes.mb10}>
-                    <EmailIcon className={classes.Icons} /> Email - support@homescapesonline.com
+
+                    <a href="mailto:support@homescapesonline.com" className={classes.Link}><EmailIcon className={classes.Icons} /> support@homescapesonline.com</a>
+
                 </Typography>
             </Grid>
         </>

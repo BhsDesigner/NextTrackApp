@@ -11,14 +11,13 @@ import { useRouter } from 'next/router'
 import { useFormik } from 'formik';
 import {Tracking} from "../dataProvider/client/Tracking";
 import Router from 'next/router'
-import Hidden from '@material-ui/core/Hidden';
 
 const Form = ({mutate}) => {
     const classes = useStyles();
     const router = useRouter()
     const { id } = router.query
 
-    const {values, errors, touched, handleChange, handleBlur, handleSubmit, isSubmitting} = useFormik({
+    const {values,  errors, touched, handleChange, handleBlur, handleSubmit, isSubmitting} = useFormik({
         initialValues: {
             number: id,
         },
@@ -53,7 +52,7 @@ const Form = ({mutate}) => {
                                 helperText={touched.number ? errors.number : ""}
                                 error={touched.number && Boolean(errors.number)}
                                 variant="outlined"
-                                autoFocus
+                               
                             />
                         </Grid>
                         <Grid item xs={12} md={3} align="center">
