@@ -8,6 +8,7 @@ import {useMutation} from "react-admin";
 import {Tracking} from "../dataProvider/client/Tracking";
 import TrackingDetails from "../pages/TrackingDetails";
 import TrackingError from "../Tracking/TrackingError";
+import LoadingScreen from "../Tracking/LoadingScreen";
 
 export const TrackYourShipment = ({id}) => {
     const classes = useStyles();
@@ -35,6 +36,9 @@ export const TrackYourShipment = ({id}) => {
             </Grid>
             {
                 error && <div>error</div>
+            }
+            {
+                loading && <LoadingScreen/>
             }
             {
                 total ===0  && <TrackingError/>

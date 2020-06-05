@@ -28,8 +28,16 @@ export const useStyles = makeStyles(theme => ({
         marginBottom:theme.spacing(10),
         textAlign:'left',
     },
+    loadingScreen :{
+        marginBottom:theme.spacing(10),
+        textAlign:'center',
+    },
     Error:{
         color:theme.palette.primary.danger,
+    },
+    LoadingIcon:{
+        marginRight:'auto',
+        maxWidth:'100px',
     },
     HistoryDetails:{
         padding:theme.spacing(5),
