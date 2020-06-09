@@ -16,16 +16,16 @@ const CourierDetails = ({tracking}) => {
         <div>
             <Container component="main" maxWidth="md" className={classes.TrackingHistory}>
                 <Grid container>
-                    <Grid item xs={6} md={12}>
+                    <Grid item xs={12} >
 
                         <Typography variant="h4" className={classes.h4}>
                             My Parcel's Journey
                         </Typography>
 
-                        <Typography>
+                        {/*<Typography>
                             <DateField options={{dateStyle:'long',timeStyle:'medium' }}
                                        record={tracking} source={'updatedAt'} showTime={true}/>
-                        </Typography>
+                        </Typography>*/}
                     </Grid>
                 </Grid>
             </Container>

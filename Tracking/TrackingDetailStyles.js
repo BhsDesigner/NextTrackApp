@@ -60,7 +60,7 @@ export const useStyles = makeStyles(theme => ({
         padding:theme.spacing(5, 0, 15, 0),
     },
     Link: {
-        color:theme.palette.secondary.main,
+        color:theme.palette.primary.blue,
     },
     GridItem:{
         padding:theme.spacing(2, 3),

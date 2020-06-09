@@ -11,10 +11,10 @@ export const useStyles = makeStyles(theme => ({
         },
     },
     TrackingInputBox:{
-        paddingTop:theme.spacing(5),
+        paddingTop:theme.spacing(2.5),
     },
     Link: {
-        color:theme.palette.secondary.main,
+        color:theme.palette.primary.blue,
     },
     DetailsBox:{
         textAlign:'left',
@@ -25,7 +25,7 @@ export const useStyles = makeStyles(theme => ({
     },
 
     h3:{
-        color:theme.palette.lightcolors.contrastText,
+        color:theme.palette.primary.black,
         letterSpacing:1
     },
     h5:{

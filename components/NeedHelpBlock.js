@@ -5,7 +5,6 @@ import PhoneIcon from "@material-ui/icons/Phone";
 import EmailIcon from "@material-ui/icons/Email";
 import React from "react";
 import {useStyles} from "../Tracking/TrackingStyles";
-import Link from "next/link";
 
 export const NeedHelpBLock = () => {
     const classes = useStyles();
@@ -13,11 +12,11 @@ export const NeedHelpBLock = () => {
         <>
             <Grid item  className={classes.GridItem}>
                 <Typography variant="h5" className={clsx(classes.h5, classes.mb10)}>
-                    Tracking Number?
+                    My tracking number isn’t working
                 </Typography>
                 <Typography className={classes.mb10}>
-                    You should have received an email from Homescapes with the shipment
-                    tracking number upon the dispatch of your order. Please use it to track your order.
+                    If you have entered your tracking number buy can’t see any details, it may be because your order is still on its way to the depot.
+                    We advise you wait a few hours before trying to track your order again.
 
                 </Typography>
 
@@ -29,8 +28,8 @@ export const NeedHelpBLock = () => {
                     Furniture Deliveries
                 </Typography>
                 <Typography className={classes.mb10}>
-                    Please note the bulky items like furniture are not delivered by courier network and cannot be
-                    tracked here. Please contact our customer support for help regarding your furniture orders.
+                    Please note that furniture and bulky items are not delivered by our standard courier network and cannot be tracked here.
+                    Please contact our customer support for help regarding your furniture orders.
 
                 </Typography>
 

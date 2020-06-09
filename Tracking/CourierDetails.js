@@ -10,12 +10,12 @@ const CourierDetails = ({tracking}) => {
     return(
         <Container component="main" maxWidth="md" className={classes.CourierDetails}>
                 <Grid container>
-                    <Grid item xs={2} md={1}>
+                    <Grid item xs={3} md={1}>
                        
                         <img src={"/images/" + tracking.courier.code + ".png"} className={classes.ImageHeight} />
                     </Grid>
 
-                    <Grid item xs={10} md={11}>
+                    <Grid item xs={9} md={11}>
 
                         <Typography>{tracking.courier.name}</Typography>
                         <Typography >{tracking.number}</Typography>
