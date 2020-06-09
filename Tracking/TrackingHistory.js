@@ -7,6 +7,7 @@ import Typography from "@material-ui/core/Typography";
 import {
     DateField
 } from 'react-admin';
+import TrackingError from "./TrackingError";
 
 const CourierDetails = ({tracking}) => {
     const classes = useStyles();
@@ -29,6 +30,10 @@ const CourierDetails = ({tracking}) => {
                 </Grid>
             </Container>
             <Container component="main" maxWidth="md" className={classes.HistoryDetails}>
+
+                {
+                    tracking.checkpoints.length===0 && <TrackingError/>
+                }
                 {
                     tracking.checkpoints.map(checkpoint => {
                         return (

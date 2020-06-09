@@ -7,7 +7,8 @@ import {useStyles} from "../Tracking/TrackingStyles";
 import {useMutation} from "react-admin";
 import {Tracking} from "../dataProvider/client/Tracking";
 import TrackingDetails from "../pages/TrackingDetails";
-import TrackingError from "../Tracking/TrackingError";
+import TrackingNotFound from "../Tracking/TrackingNotFound";
+import ConnectionError from "../Tracking/ConnectionError";
 import LoadingScreen from "../Tracking/LoadingScreen";
 
 export const TrackYourShipment = ({id}) => {
@@ -35,16 +36,16 @@ export const TrackYourShipment = ({id}) => {
                 <TrackingNumber mutate={mutate}/>
             </Grid>
             {
-                error && <div>error</div>
+                error && <ConnectionError/>
             }
             {
                 loading && <LoadingScreen/>
             }
             {
-                total ===0  && <TrackingError/>
+                total ===0  && <TrackingNotFound/>
             }
             {
-                !loading && trackings && trackings.map(tracking => {
+                total>0&& !loading && trackings && trackings.map(tracking => {
                     return (
                         <Grid item  className={classes.DetailsBox}>
                             <TrackingDetails tracking={tracking}/>

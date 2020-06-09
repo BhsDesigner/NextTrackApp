@@ -1,7 +1,6 @@
 import React from "react";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
-//import logoImage from '../images/Logo.jpg'
 import {makeStyles} from "@material-ui/core/styles";
 import Link from "next/link";
 
@@ -23,9 +22,9 @@ const TopMenu = () => {
             <Grid container maxWidth="lg">
                 <Grid item className={classes.AppLogo}>
                     <Link href="/" as="">
-                         <img src={'/images/Logo.jpg'}  />
+                        <img src={'/images/Logo.jpg'}  />
                     </Link>
-                    
+
                 </Grid>
             </Grid>
         </Container>

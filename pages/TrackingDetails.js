@@ -18,25 +18,6 @@ const TrackingDetails = ({tracking}) => {
                  </Grid>
              </Container>
 
-             {/*<Container component="main" maxWidth="md" className={classes.OrderDetails}>*/}
-             {/*    <Grid container>*/}
-             {/*        <Grid item xs={6} md={2}>*/}
-             {/*            <Typography>22 May</Typography>*/}
-             {/*            <Tooltip title="2020-05-22T11:59:00" >*/}
-             {/*                <Typography>11:59am</Typography>*/}
-             {/*            </Tooltip>*/}
-             {/*        </Grid>*/}
-
-             {/*        <Grid item xs={6} md={1}>*/}
-             {/*            <InsertEmoticonIcon className={classes.Icon} />*/}
-             {/*        </Grid>*/}
-
-             {/*        <Grid item xs={6} md={9}>*/}
-             {/*            <Typography>Delivered. Unable to sign, COVID 19</Typography>*/}
-             {/*            <Typography>United Kingdm</Typography>*/}
-             {/*        </Grid>*/}
-             {/*    </Grid>*/}
-             {/*</Container>*/}
              
              <CourierDetails tracking={tracking}/>
              
