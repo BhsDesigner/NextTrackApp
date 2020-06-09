@@ -42,10 +42,10 @@ export const TrackYourShipment = ({id}) => {
                 loading && <LoadingScreen/>
             }
             {
-                total ===0  && <TrackingNotFound/>
+                total === 0  && <TrackingNotFound/>
             }
             {
-                total>0&& !loading && trackings && trackings.map(tracking => {
+                total > 0 && !loading && trackings && trackings.map(tracking => {
                     return (
                         <Grid item  className={classes.DetailsBox}>
                             <TrackingDetails tracking={tracking}/>

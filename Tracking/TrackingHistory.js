@@ -11,7 +11,6 @@ import TrackingError from "./TrackingError";
 
 const CourierDetails = ({tracking}) => {
     const classes = useStyles();
-    console.log(tracking)
     return(
         <div>
             <Container component="main" maxWidth="md" className={classes.TrackingHistory}>
@@ -22,24 +21,24 @@ const CourierDetails = ({tracking}) => {
                             My Parcel's Journey
                         </Typography>
 
-                        <Typography>
-                            <DateField options={{dateStyle:'long',timeStyle:'medium' }}
-                                       record={tracking} source={'updatedAt'} showTime={true}/>
-                        </Typography>
+                        {/*<Typography>*/}
+                        {/*    <DateField options={{dateStyle:'long',timeStyle:'medium' }}*/}
+                        {/*               record={tracking} source={'updatedAt'} showTime={true}/>*/}
+                        {/*</Typography>*/}
                     </Grid>
                 </Grid>
             </Container>
             <Container component="main" maxWidth="md" className={classes.HistoryDetails}>
 
                 {
-                    tracking.checkpoints.length===0 && <TrackingError/>
+                    tracking.checkpoints.length === 0 && <TrackingError/>
                 }
                 {
                     tracking.checkpoints.map(checkpoint => {
                         return (
                             <Grid container>
                                 <Grid item xs={2} md={1}>
-                                    <img src={"/images/" + checkpoint.status.code + ".png"} className={classes.StatusIcons} />
+                                    <img src={"/images/" + checkpoint.tag.code + ".png"} className={classes.StatusIcons} />
                                 </Grid>
 
                                 <Grid item xs={10} md={11}>
@@ -50,11 +49,11 @@ const CourierDetails = ({tracking}) => {
                                     </Typography>
 
                                     <Typography className={classes.StatusSubHeading}>
-                                        United Kingdom
+                                        {checkpoint.state}
                                     </Typography>
                                     <Typography className={classes.StatusSubHeading}>
                                         <DateField options={{dateStyle:'long',timeStyle:'medium' }}
-                                                   record={checkpoint} source={'createdAt'} showTime={true}/>
+                                                   record={checkpoint} source={'scanDateTime'} showTime={true}/>
                                     </Typography>
                                 </Grid>
                             </Grid>
