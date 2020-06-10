@@ -29,7 +29,7 @@ export const useStyles = makeStyles(theme => ({
         letterSpacing:1
     },
     h5:{
-        color:theme.palette.lightcolors.contrastText,
+        color:theme.palette.primary.black,
     },
     mb10:{
         marginBottom: theme.spacing(2.5),

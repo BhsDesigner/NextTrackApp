@@ -28,6 +28,7 @@ export const en = {
             support_mail:'support@homescapesonline.com',
         },
         error:{
+            enter_number:'Enter a valid tracking number',
             tracking_not_found:'Tracking number not recognised. Please check and re-enter your number.',
             tracking_not_avilable:'Tracking info is not available at the moment. Please check back later.',
         },
