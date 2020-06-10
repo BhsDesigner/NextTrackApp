@@ -31,8 +31,6 @@ const i18nProvider = (host) => {
         'tracking.homescapes.fr': 'fr',
     }
     return polyglotI18nProvider(locale => {
-        console.log(host);
-        console.log(locale);
         return {...Messages[locale], ...englishMessagesDefault};
     }, mapping[host] ?? 'en');
 }
@@ -43,12 +41,9 @@ class CustomApp extends App {
     static async getInitialProps({ Component, ctx }) {
         if(ctx.req) {
             CustomApp.host = ctx.req.headers.host;
-            // console.log(ctx.req.headers.host);
         }
         else {
-            console.log(ctx);
             CustomApp.host = window.location.hostname;
-            console.log(window.location.hostname);
         }
         let pageProps = {};
         if (Component.getInitialProps) {
@@ -67,21 +62,22 @@ class CustomApp extends App {
     }
 
   render() {
-    const { Component, pageProps } = this.props;
-    return (
-        <AdminContext
-            dataProvider={ dataProvider(CustomApp.host) }
-            authProvider={ authProvider }
-            history={history}
-            i18nProvider={i18nProvider(CustomApp.host)}
-        >
-            <ThemeProvider theme={theme}>
-                <DefaultSeo {...SEO} />
-                <Component {...pageProps}/>
-            </ThemeProvider>
-        </AdminContext>
+        if(!CustomApp.host && window) CustomApp.host = window.location.hostname;
+        const { Component, pageProps } = this.props;
+        return (
+            <AdminContext
+                dataProvider={ dataProvider(CustomApp.host) }
+                authProvider={ authProvider }
+                history={history}
+                i18nProvider={i18nProvider(CustomApp.host)}
+            >
+                <ThemeProvider theme={theme}>
+                    <DefaultSeo {...SEO} />
+                    <Component {...pageProps}/>
+                </ThemeProvider>
+            </AdminContext>
 
-    );
+        );
   }
 }
 
