@@ -7,7 +7,7 @@ import { DefaultSeo } from 'next-seo';
 import {ThemeProvider} from "@material-ui/core/styles";
 import theme from "theme/theme"
 import englishMessagesDefault from 'ra-language-english';
-import englishMessages from '../translations/en';
+import * as Messages from '../translations';
 import {createWrapper} from 'next-redux-wrapper';
 import {history} from "../redux/store";
 import { makeStore } from '../redux/store';
@@ -24,14 +24,37 @@ import polyglotI18nProvider from 'ra-i18n-polyglot';
 
 
 
-const i18nProvider = polyglotI18nProvider(locale => {
-    if (locale === 'en') {
-        return {...englishMessages, ...englishMessagesDefault};
+const i18nProvider = (host) => {
+    const mapping = {
+        'tracking.homescapesonline.com': 'en',
+        'tracking.homescapesonline.de': 'de',
+        'tracking.homescapes.fr': 'fr',
     }
-}, 'en');
-
+    return polyglotI18nProvider(locale => {
+        return {...Messages[locale], ...englishMessagesDefault};
+    }, mapping[host] ?? 'en');
+}
 
 class CustomApp extends App {
+    static host;
+
+    static async getInitialProps({ Component, ctx }) {
+        if(ctx.req) {
+            CustomApp.host = ctx.req.headers.host;
+            // console.log(ctx.req.headers.host);
+        }
+        else {
+            CustomApp.host = window.location.host;
+            // console.log(window.location.host);
+        }
+        let pageProps = {};
+        if (Component.getInitialProps) {
+            let compAsyncProps = await Component.getInitialProps(ctx);
+            pageProps = { ...pageProps, ...compAsyncProps };
+        }
+        return { pageProps };
+    }
+
     componentDidMount() {
         // Remove the server-side injected CSS.
         const jssStyles = document.querySelector('#jss-server-side');
@@ -44,10 +67,10 @@ class CustomApp extends App {
     const { Component, pageProps } = this.props;
     return (
         <AdminContext
-            dataProvider={ dataProvider }
+            dataProvider={ dataProvider(CustomApp.host) }
             authProvider={ authProvider }
             history={history}
-            i18nProvider={i18nProvider}
+            i18nProvider={i18nProvider(CustomApp.host)}
         >
             <ThemeProvider theme={theme}>
                 <DefaultSeo {...SEO} />

@@ -1,7 +1,7 @@
 import Typography from "@material-ui/core/Typography";
 import React from "react";
 
-export default {
+export const en = {
     gomco: {
         connection: {
             error: 'Error occured',

@@ -1,6 +1,6 @@
 import React from "react";
 
-export default {
+export const de = {
     homescapes: {
         tracking: {
             track_your_order: 'SendungsverfolgungIhrerBestellung',

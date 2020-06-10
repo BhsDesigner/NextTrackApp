@@ -1,6 +1,6 @@
 import React from "react";
 
-export default {
+export const fr = {
     homescapes: {
         tracking: {
             track_your_order: 'Suivre votre commande',
@@ -10,7 +10,7 @@ export default {
         },
         needhelp: {
             mytracking: 'Mon numéro de suivi ne fonctionne pas',
-            mytracking_message: 'Si vous avez renseigné votre numéro de suivi mais que vous ne pouvez voir aucune information, il est possible que votre commande soit toujours en route vers le dépôt. Nous vous conseillons d'attendre quelques heures avant de tenter à nouveau de suivre votre commande.',
+            mytracking_message: 'Si vous avez renseigné votre numéro de suivi mais que vous ne pouvez voir aucune information, il est possible que votre commande soit toujours en route vers le dépôt. Nous vous conseillons d\'attendre quelques heures avant de tenter à nouveau de suivre votre commande.',
             furniture_delivery: 'Furniture Deliveries',
             furniture_delivery_message:'Please note that furniture and bulky items are not delivered by our standard courier network and cannot be tracked here.\n' +
                 '                    Please contact our customer support for help regarding your furniture orders.',
