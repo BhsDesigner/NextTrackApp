@@ -31,6 +31,8 @@ const i18nProvider = (host) => {
         'tracking.homescapes.fr': 'fr',
     }
     return polyglotI18nProvider(locale => {
+        console.log(host);
+        console.log(locale);
         return {...Messages[locale], ...englishMessagesDefault};
     }, mapping[host] ?? 'en');
 }
