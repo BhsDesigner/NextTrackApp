@@ -5,18 +5,19 @@ import PhoneIcon from "@material-ui/icons/Phone";
 import EmailIcon from "@material-ui/icons/Email";
 import React from "react";
 import {useStyles} from "../Tracking/TrackingStyles";
+import {useTranslate} from "react-admin";
 
 export const NeedHelpBLock = () => {
     const classes = useStyles();
+    const translate = useTranslate();
     return (
         <>
             <Grid item  className={classes.GridItem}>
                 <Typography variant="h5" className={clsx(classes.h5, classes.mb10)}>
-                    My tracking number isn’t working
+                    {translate('homescapes.needhelp.mytracking')}
                 </Typography>
                 <Typography className={classes.mb10}>
-                    If you have entered your tracking number buy can’t see any details, it may be because your order is still on its way to the depot.
-                    We advise you wait a few hours before trying to track your order again.
+                    {translate('homescapes.needhelp.mytracking_message')}
 
                 </Typography>
 
@@ -25,11 +26,10 @@ export const NeedHelpBLock = () => {
             
             <Grid item  className={classes.GridItem}>
                 <Typography variant="h5" className={clsx(classes.h5, classes.mb10)}>
-                    Furniture Deliveries
+                    {translate('homescapes.needhelp.furniture_delivery')}
                 </Typography>
                 <Typography className={classes.mb10}>
-                    Please note that furniture and bulky items are not delivered by our standard courier network and cannot be tracked here.
-                    Please contact our customer support for help regarding your furniture orders.
+                    {translate('homescapes.needhelp.furniture_delivery_message')}
 
                 </Typography>
 
@@ -38,19 +38,19 @@ export const NeedHelpBLock = () => {
 
             <Grid item  className={classes.GridItem}>
                 <Typography variant="h5" className={clsx(classes.h5, classes.mb10)}>
-                    Need Help?
+                    {translate('homescapes.needhelp.help_heading')}
                 </Typography>
                 <Typography className={classes.mb10}>
-                    We're here Monday-Friday 9:00 AM - 5:00 PM
+                    {translate('homescapes.needhelp.help_timing')}
                 </Typography>
 
                 <Typography className={classes.mb10}>
-                    <a href="tel:0121 3680051" className={classes.Link}> <PhoneIcon className={classes.Icons} /> Call us at: 0121 3680051</a>
+                    <a href="tel:0121 3680051" className={classes.Link}> <PhoneIcon className={classes.Icons} /> {translate('homescapes.needhelp.help_number')}</a>
 
                 </Typography>
                 <Typography className={classes.mb10}>
 
-                    <a href="mailto:support@homescapesonline.com" className={classes.Link}><EmailIcon className={classes.Icons} /> support@homescapesonline.com</a>
+                    <a href="mailto:support@homescapesonline.com" className={classes.Link}><EmailIcon className={classes.Icons} /> {translate('homescapes.needhelp.support_mail')}</a>
 
                 </Typography>
             </Grid>

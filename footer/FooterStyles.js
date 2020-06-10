@@ -14,5 +14,18 @@ export const useStyles = makeStyles(theme => ({
     Link:{
         marginLeft: theme.spacing(4),
     },
+    iconsalign:{
+        textAlign:'left',
+
+        [theme.breakpoints.down('xs')]: {
+            textAlign:'center',
+        },
+    },
+    linksalign:{
+        textAlign:'right',
+        [theme.breakpoints.down('xs')]: {
+            textAlign:'center',
+        },
+    },
 
 }));

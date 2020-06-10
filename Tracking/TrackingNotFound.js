@@ -14,7 +14,7 @@ const TrackingNotFound = (props) => {
                     <Grid item>
 
                         <Typography className={classes.Error}>
-                            <ErrorIcon className={classes.Icon} /> Tracking number is not found. Please check your number.
+                            <ErrorIcon className={classes.Icon} /> Tracking number not recognised. Please check and re-enter your number.
                         </Typography>
 
                     </Grid>

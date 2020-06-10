@@ -22,7 +22,7 @@ const Form = ({mutate}) => {
             number: id,
         },
         validationSchema: yup.object().shape({
-            number: yup.string().required("enter a valid tracking number")
+            number: yup.string().required("Enter a valid tracking number")
         }),
         onSubmit: (values, { setSubmitting }) => {
             Router.push("/track/[id]", "/track/" + values.number, {shallow: true});
