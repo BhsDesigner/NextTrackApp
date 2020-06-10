@@ -46,8 +46,9 @@ class CustomApp extends App {
             // console.log(ctx.req.headers.host);
         }
         else {
-            CustomApp.host = window.location.host;
-            // console.log(window.location.host);
+            console.log(ctx);
+            CustomApp.host = window.location.hostname;
+            console.log(window.location.hostname);
         }
         let pageProps = {};
         if (Component.getInitialProps) {
