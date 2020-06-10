@@ -12,7 +12,7 @@ export class BaseClient {
 
     protected multipart:boolean = false;
 
-    protected dataProvider: DataProviderMain = dataProvider;
+    protected dataProvider: DataProviderMain = dataProvider();
     private static instance;
 
     public getList(params, resource = null){
