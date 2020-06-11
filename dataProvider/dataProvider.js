@@ -1,7 +1,8 @@
 import {DataProviderMain} from "./DataProviderMain";
 import {LIVE} from "config";
+import HostnameProvider from "../util/HostnameProvider";
 
-export const dataProvider = (host = null) => {
-    if(host && LIVE) DataProviderMain.entrypoint = '//api' + host;
+export const dataProvider = () => {
+    if(HostnameProvider.hostname && LIVE) DataProviderMain.entrypoint = '//api' + HostnameProvider.hostname;
     return DataProviderMain.getInstance();
 }

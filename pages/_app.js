@@ -15,7 +15,7 @@ import {AdminContext } from 'react-admin';
 import {authProvider} from "../security/authProvider";
 import {dataProvider} from "../dataProvider/dataProvider";
 import polyglotI18nProvider from 'ra-i18n-polyglot';
-import {hostnameProvider} from "../util/HostnameProvider";
+import HostnameProvider from "../util/HostnameProvider";
 
 // Router.events.on('routeChangeStart', url => {
 //     NProgress.start();
@@ -25,7 +25,7 @@ import {hostnameProvider} from "../util/HostnameProvider";
 
 
 
-const i18nProvider = (host) => {
+const i18nProvider = () => {
     const mapping = {
         'tracking.homescapesonline.com': 'en',
         'tracking.homescapesonline.de': 'de',
@@ -33,14 +33,13 @@ const i18nProvider = (host) => {
     }
     return polyglotI18nProvider(locale => {
         return {...Messages[locale], ...englishMessagesDefault};
-    }, mapping[host] ?? 'en');
+    }, mapping[HostnameProvider.hostname] ?? 'en');
 }
 
 class CustomApp extends App {
-    static host;
 
     static async getInitialProps({ Component, ctx }) {
-        CustomApp.host = hostnameProvider(ctx);
+        HostnameProvider.hostnameProvider(ctx);
         let pageProps = {};
         if (Component.getInitialProps) {
             let compAsyncProps = await Component.getInitialProps(ctx);
@@ -58,14 +57,14 @@ class CustomApp extends App {
     }
 
   render() {
-        if(!CustomApp.host && window) CustomApp.host = hostnameProvider();
+        if(!HostnameProvider.hostname && window) HostnameProvider.hostnameProvider();
         const { Component, pageProps } = this.props;
         return (
             <AdminContext
-                dataProvider={ dataProvider(CustomApp.host) }
+                dataProvider={ dataProvider() }
                 authProvider={ authProvider }
                 history={history}
-                i18nProvider={i18nProvider(CustomApp.host)}
+                i18nProvider={i18nProvider()}
             >
                 <ThemeProvider theme={theme}>
                     <DefaultSeo {...SEO} />

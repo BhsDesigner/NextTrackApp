@@ -7,6 +7,7 @@ import Link from "next/link";
 import TwitterIcon from '@material-ui/icons/Twitter';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import {useTranslate} from "react-admin";
+import HostnameProvider from "../util/HostnameProvider";
 
 const FooTer = () => {
     const classes = useStyles();
@@ -30,7 +31,7 @@ const FooTer = () => {
                     </Grid>
                     <Grid item xs={12} sm={9} >
                         <Typography className={classes.linksalign} >
-                            <Link href="//www.homescapesonline.com/contact">
+                            <Link href={"//www." + HostnameProvider.getDomain() + "/contact"}>
                                 <a target={"_blank"}> {translate('homescapes.links.contact_us')} </a>
                             </Link>
                             <Link href="//www.homescapesonline.com/terms-and-condtions">
