@@ -12,7 +12,7 @@ const CourierDetails = ({tracking}) => {
                 <Grid container>
                     <Grid item xs={3} md={1}>
                        
-                        <img src={"/images/" + tracking.courier.code + ".png"} className={classes.ImageHeight} />
+                        <img src={"/images/courier/" + tracking.courier.code + ".png"} className={classes.ImageHeight} />
                     </Grid>
 
                     <Grid item xs={9} md={11}>

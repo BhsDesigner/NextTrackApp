@@ -38,7 +38,7 @@ const CourierDetails = ({tracking}) => {
                         return (
                             <Grid container>
                                 <Grid item xs={2} md={1}>
-                                    <img src={"/images/" + checkpoint.tag.code + ".png"} className={classes.StatusIcons} />
+                                    <img src={"/images/status/" + checkpoint.tag.code + ".png"} className={classes.StatusIcons} />
                                 </Grid>
 
                                 <Grid item xs={10} md={11}>

@@ -14,7 +14,7 @@ const ConnectionError = (props) => {
                     <Grid item>
 
                         <Typography className={classes.Error}>
-                            <ErrorIcon className={classes.Icon} /> Error in connecting.
+                            <ErrorIcon className={classes.Icon} /> Tracking number not recognised. Please check and re-enter your number.
 
                         </Typography>
 
