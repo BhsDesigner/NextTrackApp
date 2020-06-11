@@ -15,6 +15,7 @@ import {AdminContext } from 'react-admin';
 import {authProvider} from "../security/authProvider";
 import {dataProvider} from "../dataProvider/dataProvider";
 import polyglotI18nProvider from 'ra-i18n-polyglot';
+import {hostnameProvider} from "../util/HostnameProvider";
 
 // Router.events.on('routeChangeStart', url => {
 //     NProgress.start();
@@ -39,12 +40,7 @@ class CustomApp extends App {
     static host;
 
     static async getInitialProps({ Component, ctx }) {
-        if(ctx.req) {
-            CustomApp.host = ctx.req.headers.host;
-        }
-        else {
-            CustomApp.host = window.location.hostname;
-        }
+        CustomApp.host = hostnameProvider(ctx);
         let pageProps = {};
         if (Component.getInitialProps) {
             let compAsyncProps = await Component.getInitialProps(ctx);
@@ -62,7 +58,7 @@ class CustomApp extends App {
     }
 
   render() {
-        if(!CustomApp.host && window) CustomApp.host = window.location.hostname;
+        if(!CustomApp.host && window) CustomApp.host = hostnameProvider();
         const { Component, pageProps } = this.props;
         return (
             <AdminContext

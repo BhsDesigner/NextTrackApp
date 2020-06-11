@@ -7,6 +7,7 @@ import {UserSession} from "./client/userSession";
 import {objectToFormData} from 'object-to-formdata';
 import {stringify} from 'qs';
 import {isEmpty} from "lodash";
+import {API_FOLDER, API_DOMAIN} from "../config";
 
 interface apiResponse {
     api: any
@@ -27,15 +28,14 @@ interface getOneParams {
 export class DataProviderMain {
     private static instance: DataProviderMain;
     private schema: Schema;
-    private entrypoint: string;
-    public static apiBase:string;
+    public static entrypoint: string = API_DOMAIN;
+    public static apiBase:string = API_FOLDER;
     private axios:AxiosInstance;
 
-    private constructor(entrypoint: string){
-        this.entrypoint = entrypoint;
+    private constructor(){
         this.schema = Schema.getInstance();
         this.axios = axios.create({
-            baseURL: this.entrypoint,
+            baseURL: DataProviderMain.entrypoint,
             paramsSerializer: function (params) {
                 return stringify(params, {
                     arrayFormat: 'brackets',
@@ -52,7 +52,7 @@ export class DataProviderMain {
     }
 
     getIntrospect() {
-        return this.schema.apiDocumentationParser(this.entrypoint + DataProviderMain.apiBase, this.fetchHeaders());
+        return this.schema.apiDocumentationParser(DataProviderMain.entrypoint + DataProviderMain.apiBase, this.fetchHeaders());
     }
 
     getMany (resource, params: getManyParams){
@@ -190,8 +190,8 @@ export class DataProviderMain {
         return header;
     };
 
-    static getInstance(entrypoint: string){
-        return this.instance ?? (this.instance =  new this(entrypoint));
+    static getInstance(){
+        return this.instance ?? (this.instance =  new this());
     }
 
     query (query) {

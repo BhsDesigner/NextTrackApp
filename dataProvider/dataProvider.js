@@ -1,7 +1,7 @@
 import {DataProviderMain} from "./DataProviderMain";
-import {API_DOMAIN, API_FOLDER, LIVE} from "config";
+import {LIVE} from "config";
 
-DataProviderMain.apiBase = API_FOLDER;
 export const dataProvider = (host = null) => {
-    return DataProviderMain.getInstance(LIVE && host ? host: API_DOMAIN);
+    if(host && LIVE) DataProviderMain.entrypoint = 'api' + host;
+    return DataProviderMain.getInstance();
 }
