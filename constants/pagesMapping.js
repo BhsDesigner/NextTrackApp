@@ -1,21 +1,21 @@
 import HostnameProvider from "../util/HostnameProvider";
 
 const pagesMapping = {
-    'tracking.homescapesonline.com': {
+    'homescapesonline.com': {
         'privacy': 'info/website-privacy-and-cookies',
         'terms':   'terms-and-condtions',
         'contact': 'contact',
         'help_number': '0121 3680051',
         'support_mail': 'support@homescapesonline.com',
     },
-    'tracking.homescapesonline.de': {
+    'homescapesonline.de': {
         'privacy': 'Datenschutzerklärung',
         'terms':   'agb',
         'contact':  'contact',
         'help_number': '+44 121 3680051',
         'support_mail': 'support@homescapesonline.de',
     },
-    'tracking.homescapes.fr': {
+    'homescapes.fr': {
         'privacy': 'donnees-personnelles-et-cookies' ,
         'terms':   'termes-et-conditions',
         'contact':  'contact',
