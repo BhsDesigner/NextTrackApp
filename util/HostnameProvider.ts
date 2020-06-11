@@ -1,5 +1,5 @@
 export const hostnameProvider = (ctx = null) => {
-    if(ctx.req) {
+    if(ctx && ctx.req) {
         return  ctx.req.headers.host;
     }
     else {
