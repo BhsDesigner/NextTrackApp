@@ -3,19 +3,31 @@ import React from "react";
 export const de = {
     homescapes: {
         tracking: {
-            track_your_order: 'SendungsverfolgungIhrerBestellung',
-            once_your_order: 'NachdemIhreSendungversandtwurde,erhalten Sie eineBestätigungs-EmailmitIhrerSendungsverfolgungs-Information.',
-            please_enter_your: 'BittegebenSie die vollständigeAuftragsnummer in die untenstehendeZeileein.',
+            track_your_order: 'Sendungsverfolgung Ihrer Bestellung',
+            thank_you: 'Thank you for shopping with Homescapes.',
+            once_your_order: 'Nachdem Ihre Sendung versandt wurde, erhalten\n' +
+                'Sie eine Bestätigungs-Email mit Ihrer\n' +
+                'Sendungsverfolgungs-Information.',
+            please_enter_your: 'Bitte geben Sie die vollständige Auftragsnummer\n' +
+                'in die untenstehende Zeile ein.',
         },
         needhelp: {
-            mytracking: 'MeineAuftragsnummerfunktioniertnicht.',
-            mytracking_message: 'Wenn Sie die AuftragsnummereingegebenhabenaberkeineInformationensehen, kann es sein dassIhreBestellungnoch auf dem Wegzum Depot ist. WirratenIhnen, einpaarStudenabzuwarten, bevor Sie es erneutversuchen.',
+            mytracking: 'Meine Auftragsnummer funktioniert nicht.',
+            mytracking_message: 'Wenn Sie die Auftragsnummer eingegeben haben\n' +
+                'aber keine Informationen sehen, kann es sein dass\n' +
+                'Ihre Bestellung noch auf dem Weg zum Depot ist.\n' +
+                'Wir raten Ihnen, ein paar Studen abzuwarten,\n' +
+                'bevor Sie es erneut versuchen.',
             furniture_delivery: 'Möbel-Lieferungen',
-            furniture_delivery_message:'Please note that furniture and bulky items are not delivered by our standard courier network and cannot be tracked here. Please contact our customer support for help regarding your furniture orders.	Bittebeachten Sie, dassMöbel und voluminöseArtikelnicht von unserem Standard-Zustellergeliefert und somitnichtsendungsverfolgt warden können. Bittekontaktieren Sie unserenKundenservicefürHilfebezüglichIhrerMöbel-Bestellungen.',
+            furniture_delivery_message:'Bitte beachten Sie, dass Möbel und voluminöse Artikel nicht ' +
+                'von unserem Standard-Zusteller geliefert ' +
+                'und somit nicht sendungsverfolgt warden können. Bitte kontaktieren Sie unseren Kundenservice für Hilfe bezüglich Ihrer Möbel-Bestellungen.',
             need_help_heading:'Brauchen Sie Hilfe?',
-            help_timing:'WirsindMontags-Freitags von 10 – 18 Uhrerreichbar',
-            help_number:'Call us at: 0121 3680051',
-            support_mail:'support@homescapesonline.com',
+            help_timing:'Wir sind Montags-Freitags von 10 – 18 Uhr\n' +
+                '\n' +
+                'erreichbar',
+            help_number:'Rufen Sie uns an +44 1213680051',
+            support_mail:'support@homescapesonline.de',
         },
         error:{
             enter_number:'Enter a valid tracking number',

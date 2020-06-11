@@ -8,10 +8,12 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import {useTranslate} from "react-admin";
 import HostnameProvider from "../util/HostnameProvider";
+import {getDomainPage} from '../constants/pagesMapping';
 
 const FooTer = () => {
     const classes = useStyles();
     const translate = useTranslate();
+    
     return (
         <Container component="main" maxWidth="xl" padding="0" className={classes.FooterContainer} >
 
@@ -31,13 +33,13 @@ const FooTer = () => {
                     </Grid>
                     <Grid item xs={12} sm={9} >
                         <Typography className={classes.linksalign} >
-                            <Link href={"//www." + HostnameProvider.getDomain() + "/contact"}>
+                            <Link href={getDomainPage('contact')}>
                                 <a target={"_blank"}> {translate('homescapes.links.contact_us')} </a>
                             </Link>
-                            <Link href="//www.homescapesonline.com/terms-and-condtions">
+                            <Link href={getDomainPage('terms')}>
                                 <a target={"_blank"} className={classes.Link}> {translate('homescapes.links.terms_condition')} </a>
                             </Link>
-                            <Link href="//www.homescapesonline.com/info/website-privacy-and-cookies">
+                            <Link href={getDomainPage('privacy')}>
                                 <a target={"_blank"} className={classes.Link}> {translate('homescapes.links.privacy_policy')} </a>
                             </Link>
                         </Typography>

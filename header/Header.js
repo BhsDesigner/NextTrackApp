@@ -3,6 +3,7 @@ import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import {makeStyles} from "@material-ui/core/styles";
 import Link from "next/link";
+import { useLocale } from 'react-admin';
 
 const useStyles = makeStyles(theme => ({
     HeaderContainer: {
@@ -17,12 +18,13 @@ const useStyles = makeStyles(theme => ({
 
 const TopMenu = () => {
     const classes = useStyles();
+    const locale = useLocale();
     return (
         <Container component="main" maxWidth="xl" padding="0" className={classes.HeaderContainer} >
             <Grid container maxWidth="lg">
                 <Grid item className={classes.AppLogo}>
                     <Link href="/" as="/">
-                        <img src={'/images/Logo.jpg'}  />
+                        <img src={'/images/logo_' + locale + '.jpg'}  />
                     </Link>
 
                 </Grid>
