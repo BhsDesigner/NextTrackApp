@@ -6,7 +6,7 @@ import EmailIcon from "@material-ui/icons/Email";
 import React from "react";
 import {useStyles} from "../Tracking/TrackingStyles";
 import {useTranslate} from "react-admin";
-import {getDomainPage} from "../constants/pagesMapping";
+import {getDomainPage, getDomainVariable} from "../constants/pagesMapping";
 
 export const NeedHelpBLock = () => {
     const classes = useStyles();
