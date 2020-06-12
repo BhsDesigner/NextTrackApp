@@ -2,8 +2,6 @@ import React from 'react';
 import App from 'next/app';
 import "./App.css"
 //import NProgress from 'nprogress';
-import SEO from 'constants/next-seo.config';
-import { DefaultSeo } from 'next-seo';
 import {ThemeProvider} from "@material-ui/core/styles";
 import theme from "theme/theme"
 import englishMessagesDefault from 'ra-language-english';
@@ -16,6 +14,7 @@ import {authProvider} from "../security/authProvider";
 import {dataProvider} from "../dataProvider/dataProvider";
 import polyglotI18nProvider from 'ra-i18n-polyglot';
 import HostnameProvider from "../util/HostnameProvider";
+import {TranslationSeo} from "../components/TranslationSeo";
 
 // Router.events.on('routeChangeStart', url => {
 //     NProgress.start();
@@ -67,7 +66,7 @@ class CustomApp extends App {
                 i18nProvider={i18nProvider()}
             >
                 <ThemeProvider theme={theme}>
-                    <DefaultSeo {...SEO} />
+                    <TranslationSeo/>
                     <Component {...pageProps}/>
                 </ThemeProvider>
             </AdminContext>
