@@ -4,9 +4,11 @@ import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import ErrorIcon from '@material-ui/icons/Error';
+import {useTranslate} from "react-admin";
 
 const ConnectionError = (props) => {
     const classes = useStyles();
+    const translate = useTranslate();
     return(
         <div>
             <Container component="main" maxWidth="md" className={classes.TrackingError}>
