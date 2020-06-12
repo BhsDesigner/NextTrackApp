@@ -17,7 +17,7 @@ export const de = {
             furniture_delivery: 'Möbel-Lieferungen',
             furniture_delivery_message:'Bitte beachten Sie, dass Möbel und voluminöse Artikel nicht von unserem Standard-Zusteller geliefert und somit hier ' +
                 'nicht sendungsverfolgt werden können. Bitte kontaktieren Sie unseren Kundenservice für Hilfe bezüglich Ihrer Möbel-Bestellung.',
-            need_help_heading:'Benötigen Sie Hilfe bei Ihrer Bestellung?',
+            help_heading:'Benötigen Sie Hilfe bei Ihrer Bestellung?',
             help_timing:'Wir sind von Montag bis Freitag von 10:00 bis 18:00 Uhr erreichbar',
             help_number:'+44 1213680051',
             support_mail:'support@homescapesonline.de',
