@@ -46,14 +46,14 @@ export const NeedHelpBLock = () => {
                 </Typography>
 
                 <Typography className={classes.mb10}>
-                    <a href={`tel:${getDomainPage('help_number')}`} className={classes.Link}>
+                    <a href={`tel:${getDomainVariable('help_number')}`} className={classes.Link}>
                         <PhoneIcon className={classes.Icons} /> {translate('homescapes.needhelp.help_number')}
                     </a>
 
                 </Typography>
                 <Typography className={classes.mb10}>
 
-                    <a href={`mailto:${getDomainPage('support_mail')}`} className={classes.Link}>
+                    <a href={`mailto:${getDomainVariable('support_mail')}`} className={classes.Link}>
                         <EmailIcon className={classes.Icons} /> {translate('homescapes.needhelp.support_mail')}
                     </a>
 

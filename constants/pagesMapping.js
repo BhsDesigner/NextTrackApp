@@ -30,3 +30,10 @@ export const getDomainPage = (type) => {
     if(pagesMapping[domain] && pagesMapping[domain][type]) return prefix + pagesMapping[domain][type];
     return prefix + type;
 }
+
+
+export const getDomainVariable = (type) => {
+    const domain = HostnameProvider.getDomain();
+    if(pagesMapping[domain] && pagesMapping[domain][type]) return pagesMapping[domain][type];
+    return type;
+}
