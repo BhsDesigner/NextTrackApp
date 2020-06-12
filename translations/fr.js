@@ -34,6 +34,7 @@ export const fr = {
             title:'Suivre votre commande',
             description:'Suivez votre commande Homescapes, pour pouvoir facilement et rapidement suivre votre commande, ' +
                 'obtenir des mises à jour sur la localisation de votre colis et sur la date de livraison',
+            url:'https://www.homescapes.fr/',
         },
     },
 };

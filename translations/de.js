@@ -36,6 +36,7 @@ export const de = {
             title:'Wo ist meine Bestellung?',
             description:'Verfolgen Sie Ihre Homescapes-Bestellung schnell und einfach, erhalten ' +
                 'Sie Informationen zur Lage und zum voraussichtlichen Lieferzeitpunkt Ihrer Bestellung',
+            url:'https://www.homescapesonline.de/',
         },
     },
 };

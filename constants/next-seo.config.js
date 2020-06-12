@@ -6,7 +6,7 @@ export const DefaultSeo = (translate) => {
         openGraph: {
             type: 'website',
             locale: 'en_IE',
-            url: 'https://www.homescapesonline.com/',
+            url: translate('homescapes.seo.url'),
             site_name: 'Homescapes',
         },
         twitter: {

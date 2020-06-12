@@ -43,6 +43,7 @@ export const en = {
             title:'Track your order journey',
             description:'Track your Homescapes order, quick and easy way to track your order, ' +
                 'get up to date information on the location of your package and when it is due to be delivered.',
+            url:'https://www.homescapesonline.com/',
         },
     },
 };
