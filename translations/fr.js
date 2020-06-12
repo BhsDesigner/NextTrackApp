@@ -17,7 +17,7 @@ export const fr = {
             furniture_delivery_message:'',
             help_heading:'Besoin d\'aide ?',
             help_timing:'Nous sommes disponibles du lundi au vendredi de 10h à 18h',
-            help_number:'Appelez-nous au : +44 (0) 121 3680051',
+            help_number:'+44 (0) 121 3680051',
             support_mail:'service.client@homescapesonline.com',
         },
         error:{
@@ -29,6 +29,11 @@ export const fr = {
             contact_us:'Nous contacter',
             terms_condition:'Conditions Générales de Vente ',
             privacy_policy:'Politique de confidentialité',
+        },
+        seo:{
+            title:'Suivre votre commande',
+            description:'Suivez votre commande Homescapes, pour pouvoir facilement et rapidement suivre votre commande, ' +
+                'obtenir des mises à jour sur la localisation de votre colis et sur la date de livraison',
         },
     },
 };

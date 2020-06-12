@@ -1,7 +1,7 @@
 export const DefaultSeo = (translate) => {
     return {
-        title: translate('Track Your Order Status'),
-        description: 'Description here',
+        title: translate('homescapes.seo.title'),
+        description: translate('homescapes.seo.description'),
         titleTemplate: '%s',
         openGraph: {
             type: 'website',

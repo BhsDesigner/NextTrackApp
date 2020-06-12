@@ -19,7 +19,7 @@ export const de = {
                 'nicht sendungsverfolgt werden können. Bitte kontaktieren Sie unseren Kundenservice für Hilfe bezüglich Ihrer Möbel-Bestellung.',
             need_help_heading:'Benötigen Sie Hilfe bei Ihrer Bestellung?',
             help_timing:'Wir sind von Montag bis Freitag von 10:00 bis 18:00 Uhr erreichbar',
-            help_number:'Rufen Sie uns an +44 1213680051',
+            help_number:'+44 1213680051',
             support_mail:'support@homescapesonline.de',
         },
         error:{
@@ -31,6 +31,11 @@ export const de = {
             contact_us:'Kontaktieren Sie uns',
             terms_condition:'Geschäftsbedingungen',
             privacy_policy:'Datenschutzrichtlinie',
+        },
+        seo:{
+            title:'Wo ist meine Bestellung?',
+            description:'Verfolgen Sie Ihre Homescapes-Bestellung schnell und einfach, erhalten ' +
+                'Sie Informationen zur Lage und zum voraussichtlichen Lieferzeitpunkt Ihrer Bestellung',
         },
     },
 };

@@ -35,9 +35,14 @@ export const en = {
             tracking_not_avilable:'Tracking info is not available at the moment. Please check back later.',
         },
         links:{
-            contact_us:'Contact US',
+            contact_us:'Contact Us',
             terms_condition:'Terms & Conditions',
             privacy_policy:'Privacy Policy',
+        },
+        seo:{
+            title:'Track your order journey',
+            description:'Track your Homescapes order, quick and easy way to track your order, ' +
+                'get up to date information on the location of your package and when it is due to be delivered.',
         },
     },
 };
