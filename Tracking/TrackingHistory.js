@@ -47,9 +47,17 @@ const CourierDetails = ({tracking}) => {
                                         {checkpoint.message}
 
                                     </Typography>
-
+                                    <Typography className={classes.StatusSubHeading}>
+                                        {checkpoint.rawTag}
+                                    </Typography>
+                                    <Typography className={classes.StatusSubHeading}>
+                                        {checkpoint.city}
+                                    </Typography>
                                     <Typography className={classes.StatusSubHeading}>
                                         {checkpoint.state}
+                                    </Typography>
+                                    <Typography className={classes.StatusSubHeading}>
+                                        {checkpoint.countryIso3}
                                     </Typography>
                                     <Typography className={classes.StatusSubHeading}>
                                         <DateField options={{dateStyle:'long',timeStyle:'medium' }}
