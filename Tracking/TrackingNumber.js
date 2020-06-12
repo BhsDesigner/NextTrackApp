@@ -11,10 +11,13 @@ import { useRouter } from 'next/router'
 import { useFormik } from 'formik';
 import {Tracking} from "../dataProvider/client/Tracking";
 import Router from 'next/router'
+import {useTranslate} from "react-admin";
+import Typography from "@material-ui/core/Typography";
 
 const Form = ({mutate}) => {
     const classes = useStyles();
-    const router = useRouter()
+    const router = useRouter();
+    const translate = useTranslate();
     const { id } = router.query
 
     const {values,  errors, touched, handleChange, handleBlur, handleSubmit, isSubmitting} = useFormik({
@@ -22,7 +25,7 @@ const Form = ({mutate}) => {
             number: id,
         },
         validationSchema: yup.object().shape({
-            number: yup.string().required("Enter a valid tracking number")
+            number: yup.string().required(translate('homescapes.error.enter_number'))
         }),
         onSubmit: (values, { setSubmitting }) => {
             Router.push("/track/[id]", "/track/" + values.number, {shallow: true});
@@ -43,7 +46,7 @@ const Form = ({mutate}) => {
                                 autoComplete="number"
                                 name="number"
                                 id="trackingNumber"
-                                label="Tracking Number"
+                                label={(translate('homescapes.tracking.number'))}
                                 fullwidth
                                 className={classes.TrackingInput}
                                 value={values.number}
@@ -61,7 +64,7 @@ const Form = ({mutate}) => {
                                     className={classes.submit}
                                     disabled={isSubmitting}
                             >
-                                <LocationOnIcon className={classes.Icons} /> Track
+                                <LocationOnIcon className={classes.Icons} />  {translate('homescapes.tracking.track')}
                             </Button>
                         </Grid>
                         

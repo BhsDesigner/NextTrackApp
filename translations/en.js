@@ -14,6 +14,8 @@ export const en = {
             thank_you: 'Thank you for shopping with Homescapes.',
             once_your_order: 'Once your order has been dispatched you will receive a shipment confirmation email containing your tracking information.',
             please_enter_your: 'Please enter your full tracking number in the box below.',
+            number: 'Tracking Number',
+            track: 'Track',
         },
         needhelp: {
             mytracking: 'My tracking number isn’t working',

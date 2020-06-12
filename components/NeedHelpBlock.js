@@ -6,6 +6,7 @@ import EmailIcon from "@material-ui/icons/Email";
 import React from "react";
 import {useStyles} from "../Tracking/TrackingStyles";
 import {useTranslate} from "react-admin";
+import {getDomainPage} from "../constants/pagesMapping";
 
 export const NeedHelpBLock = () => {
     const classes = useStyles();
@@ -45,12 +46,16 @@ export const NeedHelpBLock = () => {
                 </Typography>
 
                 <Typography className={classes.mb10}>
-                    <a href="tel:0121 3680051" className={classes.Link}> <PhoneIcon className={classes.Icons} /> {translate('homescapes.needhelp.help_number')}</a>
+                    <a href={`tel:${getDomainPage('help_number')}`} className={classes.Link}>
+                        <PhoneIcon className={classes.Icons} /> {translate('homescapes.needhelp.help_number')}
+                    </a>
 
                 </Typography>
                 <Typography className={classes.mb10}>
 
-                    <a href="mailto:support@homescapesonline.com" className={classes.Link}><EmailIcon className={classes.Icons} /> {translate('homescapes.needhelp.support_mail')}</a>
+                    <a href={`mailto:${getDomainPage('support_mail')}`} className={classes.Link}>
+                        <EmailIcon className={classes.Icons} /> {translate('homescapes.needhelp.support_mail')}
+                    </a>
 
                 </Typography>
             </Grid>
