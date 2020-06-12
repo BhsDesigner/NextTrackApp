@@ -14,7 +14,7 @@ const ConnectionError = (props) => {
                     <Grid item>
 
                         <Typography className={classes.Error}>
-                            <ErrorIcon className={classes.Icon} /> Tracking number not recognised. Please check and re-enter your number.
+                            <ErrorIcon className={classes.Icon} /> {translate('homescapes.error.tracking_not_found')}
 
                         </Typography>
 

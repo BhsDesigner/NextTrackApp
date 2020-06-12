@@ -15,7 +15,7 @@ const TrackingError = (props) => {
                     <Grid item>
 
                         <Typography className={classes.Error}>
-                           <ErrorIcon className={classes.Icon} /> Tracking info is not available at the moment. Please check back later.
+                           <ErrorIcon className={classes.Icon} /> {translate('homescapes.error.tracking_not_avilable')}
 
                         </Typography>
                         
