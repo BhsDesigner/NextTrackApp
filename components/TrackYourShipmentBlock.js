@@ -6,7 +6,7 @@ import React, {useEffect} from "react";
 import {useStyles} from "../Tracking/TrackingStyles";
 import {useTranslate, useMutation} from "react-admin";
 import {Tracking} from "../dataProvider/client/Tracking";
-import TrackingDetails from "../pages/TrackingDetails";
+import TrackingDetails from "../Tracking/TrackingDetails";
 import TrackingNotFound from "../Tracking/TrackingNotFound";
 import ConnectionError from "../Tracking/ConnectionError";
 import LoadingScreen from "../Tracking/LoadingScreen";

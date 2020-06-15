@@ -3,7 +3,7 @@ import Layout from "../components/Layout";
 import Container from "@material-ui/core/Container";
 import {useStyles} from "Tracking/TrackingStyles"
 import {TrackYourShipment} from "../components/TrackYourShipmentBlock";
-import {NeedHelpBLock} from "../components/NeedHelpBlock";
+import {NeedHelpBLock} from "../Tracking/NeedHelpBlock";
 
 const Index = (props) => {
     const classes = useStyles();

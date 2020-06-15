@@ -4,7 +4,7 @@ import clsx from "clsx";
 import PhoneIcon from "@material-ui/icons/Phone";
 import EmailIcon from "@material-ui/icons/Email";
 import React from "react";
-import {useStyles} from "../Tracking/TrackingStyles";
+import {useStyles} from "./TrackingStyles";
 import {useTranslate} from "react-admin";
 import {getDomainPage, getDomainVariable} from "../constants/pagesMapping";
 
@@ -19,10 +19,7 @@ export const NeedHelpBLock = () => {
                 </Typography>
                 <Typography className={classes.mb10}>
                     {translate('homescapes.needhelp.mytracking_message')}
-
                 </Typography>
-
-
             </Grid>
             
             <Grid item  className={classes.GridItem}>
@@ -33,8 +30,6 @@ export const NeedHelpBLock = () => {
                     {translate('homescapes.needhelp.furniture_delivery_message')}
 
                 </Typography>
-
-
             </Grid>
 
             <Grid item  className={classes.GridItem}>
