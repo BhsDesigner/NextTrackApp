@@ -23,7 +23,7 @@ export const fr = {
         error:{
             enter_number:'Veuillez renseigner un numéro de suivi valide',
             tracking_not_found:'Numéro de suivi non reconnu. Veuillez vérifier et saisir à nouveau votre numéro.',
-            tracking_not_avilable:' Les informations de suivi ne sont pas disponibles pour le moment. Veuillez réessayer plus tard ou ',
+            tracking_not_avilable:' Les informations de suivi ne sont pas disponibles pour le moment. Veuillez réessayer plus tard.',
             tracking_on_courier_website:'suivre directement sur le site Web de messagerie.',
         },
         links:{

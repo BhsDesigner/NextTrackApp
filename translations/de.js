@@ -25,7 +25,7 @@ export const de = {
         error:{
             enter_number:'Bitte geben Sie eine gültige Auftragsnummer ein.',
             tracking_not_found:'Die eingegebene Auftragsnummer wurde nicht erkannt. Bitte überprüfen Sie die Nummer und geben Sie sie erneut ein.',
-            tracking_not_avilable:'Sendungsverfolgung ist momentan nicht möglich. Bitte probieren Sie es zu einem späteren Zeitpunkt noch einmal oder ',
+            tracking_not_avilable:'Sendungsverfolgung ist momentan nicht möglich. Bitte probieren Sie es zu einem späteren Zeitpunkt noch einmal.',
             tracking_on_courier_website:'direkt auf der Kurier-Website verfolgen.',
         },
         links:{

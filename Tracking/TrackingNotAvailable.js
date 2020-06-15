@@ -19,10 +19,18 @@ const TrackingError = ({tracking}) => {
                         <Typography className={classes.Error}>
 
                             <ErrorIcon className={classes.Icon} /> {translate('homescapes.error.tracking_not_avilable')}
-                            <a target={"_blank"} href={tracking.trackingUrl} className={classes.Link}>
-                                {translate('homescapes.error.tracking_on_courier_website')}
-                            </a>
+
                         </Typography>
+
+                        {
+                            tracking.trackingUrl &&
+
+                            <Typography className={classes.ErrorURL}>
+                                <a target={"_blank"} href={tracking.trackingUrl} className={classes.Link}>
+                                    {translate('homescapes.error.tracking_on_courier_website')}
+                                </a>
+                            </Typography>
+                        }
 
                     </Grid>
                 </Grid>

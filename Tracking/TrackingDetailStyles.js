@@ -35,6 +35,11 @@ export const useStyles = makeStyles(theme => ({
     Error:{
         color:theme.palette.primary.danger,
     },
+
+    ErrorURL:{
+        marginLeft :theme.spacing(7),
+        marginTop :theme.spacing(1),
+    },
     LoadingIcon:{
         marginRight:'auto',
         maxWidth:'100px',
