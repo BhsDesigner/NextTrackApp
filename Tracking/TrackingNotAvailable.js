@@ -23,7 +23,7 @@ const TrackingError = ({tracking}) => {
                                 {translate('homescapes.error.tracking_on_courier_website')}
                             </a>
                         </Typography>
-                        
+
                     </Grid>
                 </Grid>
             </Container>

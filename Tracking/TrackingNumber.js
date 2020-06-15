@@ -14,6 +14,7 @@ import Router from 'next/router'
 import {useTranslate} from "react-admin";
 import Typography from "@material-ui/core/Typography";
 
+
 const Form = ({mutate}) => {
     const classes = useStyles();
     const router = useRouter();

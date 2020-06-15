@@ -12,6 +12,7 @@ export const useStyles = makeStyles(theme => ({
         color:theme.palette.secondary.main,
         borderWidth:2,
     },
+    
     submit: {
         margin:theme.spacing(0, 0, 2),
         height: 56,
@@ -30,5 +31,4 @@ export const useStyles = makeStyles(theme => ({
     Icons:{
         marginRight:5,
     },
-
 }));

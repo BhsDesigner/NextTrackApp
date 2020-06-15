@@ -93,6 +93,13 @@ const Theme = createMuiTheme({
                 color: 'white',
             },
         },
+        MuiInputBase: {
+            '@global': {
+                input: {
+                    textTransform:'uppercase',
+                },
+            },
+        },
     },
 
 });
