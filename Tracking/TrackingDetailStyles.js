@@ -52,6 +52,7 @@ export const useStyles = makeStyles(theme => ({
     StatusSubHeading:{
         fontSize:14,
         color:theme.palette.primary.light,
+        marginRight:  theme.spacing(1),
     },
     historyIcons:{
         marginBottom:'-18px',
@@ -89,7 +90,7 @@ export const useStyles = makeStyles(theme => ({
     },
     ImageHeight:{
         height:'auto',
-        maxWidth:65,
+        maxWidth:60,
     }
 
 }));

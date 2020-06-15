@@ -24,7 +24,9 @@ const TopMenu = () => {
             <Grid container maxWidth="lg">
                 <Grid item className={classes.AppLogo}>
                     <Link href="/" as="/">
-                        <img src={'/images/logo_' + locale + '.jpg'}  />
+                        <a>
+                            <img src={'/images/logo_' + locale + '.jpg'}  />
+                        </a>
                     </Link>
 
                 </Grid>
