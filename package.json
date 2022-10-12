@@ -8,7 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@api-platform/api-doc-parser": "^0.10.0",
+    "@api-platform/api-doc-parser": "^0.16.1",
     "@material-ui/icons": "^4.9.1",
     "@types/next-redux-wrapper": "^3.0.0",
     "@types/qs": "^6.9.3",
